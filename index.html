@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* CSS styles for the box */
+        .box {
+            width: 400px;
+            height:300px;
+            border: 2px solid #333;
+            padding: 40px;
+            margin-top: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <div class="box">
+    <h1 style="color: blue;">Login Form</h1>
+    
+    <table>
+        
+        <tr>
+            <td>Name:</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Address:</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td><input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label></td>
+        </tr>
+        <tr>
+            <td><label for="gender">Department:</label></td>
+                <td><select id="dept" name="dept">
+                    <option value="cse">cse</option>
+                    <option value="eee">ece</option>
+                    <option value="civil">civil</option>
+                </select></td>
+                
+        </tr>
+       
+        <tr>
+            
+            <td><input type="submit" value="Submit"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+   
+
+
+    </table>
+   </center> </div>
+ 
+
+</body>
+</html>
