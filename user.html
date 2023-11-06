@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #ddd;
+        align-items: center;
+        justify-content: center;
+    }
+
+    *{
+        box-sizing: border-box;
+    }
+
+    .container{
+        display: flex;
+        font-family: arial;
+        width: 100%;
+        height: 100%;
+        padding: 20px 20px;
+    }
+
+    .box{
+        flex: 30%;
+        display: table;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        background-color:  #0d1425;
+        color: #fff;
+        padding: 30px 30px;
+        border-radius: 20px;
+    }
+
+    .box img{
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+        height: 250px;
+        width: 250px;
+    }
+
+    .box ul{
+        margin-top: 30px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .box ul li{
+        list-style: none;
+        margin-top: 50px;
+        font-weight: 100;
+    }
+
+    .box ul li i{
+        cursor: pointer;
+        margin: 10px;
+        font-size: 40px;
+    }
+
+    .box ul li i:hover{
+        opacity: 0.6;
+    }
+
+    .About{
+        margin-left: 20px;
+        flex: 50%;
+        display: table;
+        padding: 30px 30px;
+        font-size: 20px;
+        background-color: #b286d1;
+        border-radius: 20px;
+    }
+
+    .About h1{
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 50px;
+        font-weight: 500;
+    }
+
+    .About ul li{
+        list-style: none;
+    }
+
+    .About ul{
+        margin-top: 20px;
+    }
+    .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.About {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+    @media screen and (max-width: 1068px) {
+        .container{
+            display: table;
+        }
+
+        .box{
+            width: 100%;
+        }
+
+        .About{
+            width: 100%;
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        .About h1{
+            text-align: center;
+        }
+    }
+</style>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var about = this.parentElement.querySelector(".About");
+        if (about.style.display === "block" || about.style.display === "") {
+          about.style.display = "none";
+        } else {
+          about.style.display = "block";
+        }
+      });
+    }
+</script>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="image/mark.jpg" alt="">
+            <ul>
+                <li>Mark Elliot Zuckerberg</li>
+                <li>Co-founded of Facebook</li>
+                <li>Harvard University</li>
+               
+            </ul>
+            <div style="margin-top: 40px;">
+                <a href="https://www.instagram.com/zuck/?img_index=1"><i class="fa fa-instagram"></i></a> 
+                <a href="https://twitter.com/finkd?lang=en"><i class="fa fa-twitter"></i></a>  
+                <a href="https://www.linkedin.com/in/mark-zuckerberg-618bba58"><i class="fa fa-linkedin"></i></a>  
+                <a href="https://www.facebook.com/zuck/?locale=vi_VN"><i class="fa fa-facebook"></i></a>
+              </div>
+            <button class="accordion">About My Profile</button>  
+        </div>
+        <div class="About">
+            <ul>
+                <li>
+                <h1>About</h1></li>
+            </ul>
+            <ul>
+                <h3>Work</h3>
+                <li>Cofounder and chief executive officer of Facebook</li>
+            </ul>
+            <ul>
+                <h3>Gender</h3>
+                <li>Male</li>
+            </ul>
+            <ul>
+                <h3>Country</h3>
+                <li>New York</li>
+            </ul>
+            <ul>
+                <h3>More Info</h3>
+                <p>He was named Person of the Year by Time magazine in 2010, the same year when Facebook eclipsed more than half a billion users
+                    Zuckerberg launched "Thefacebook", originally located at thefacebook.com, in partnership with his roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes.
+                    They began with Columbia, New York University, Stanford, Dartmouth, Cornell, University of Pennsylvania, Brown, and Yale.
+                </p>
+            </ul>
+            <ul>
+                <h3>Contact</h3>
+                <li>markzukerberg@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
