@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 500px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -38,16 +38,64 @@ a {
 button:hover, a:hover {
   opacity: 0.7;
 }
+.hidden {
+  display: none;
+}
+
+
+
+.container {
+  align-content: center;
+  width: 100%;
+  background-color: #ddd;
+  
+  
+}
+
+
+.skills {
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: rgb(0, 0, 0);
+}
+
+.photoshop {width: calc(100% - 20px); background-color: #007c4f;}
+.photography {width: 80%; background-color: #007c4f;}
+.drawing {width: 65%; background-color:#007c4f;}
+.media {width: 60%; background-color:#007c4f;}
+
+
+body{
+  background:wheat;
+  font-family: montseraat;
+}
+.wrapper{
+  width: 90px;
+  min-height: auto;
+  margin: 20px; auto;
+  
+}
+.wrapper ul{
+  list-style: none;
+  padding: 0;
+}
+
+
+
+
 </style>
+
+
 </head>
 <body>
 
 <h2 style="text-align:center">User Profile</h2>
 
 <div class="card">
-  <img src="img/profile img.avif" alt="John" style="width:100%">
+  <img src="img/profile img.avif" alt="John" style="width:50%">
   <h1> SYED NASLA </h1>
-  <p class="title">Webdeveloper of Lamda</p>
+  <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Webdeveloper</p>
   <p>Anna University</p>
   <div style="margin: 24px 0;">
     <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a> 
@@ -55,8 +103,32 @@ button:hover, a:hover {
     <a href="https://in.linkedin.com/"><i class="fa fa-linkedin"></i></a>  
     <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569849%7Cb%7Cfacebook%7C&placement=&creative=589460569849&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-592856129%26loc_physical_ms%3D9148702%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiAuqKqBhDxARIsAFZELmKjvLJDQLbP9jmTjymnc2Py60PNYsEr_0b4US2a6gGm41qeYOfDXK8aAv3pEALw_wcB"><i class="fa fa-facebook"></i></a>
   </div>
-  <p><button>Contact</button></p>
-</div>
+  <div class="wrapper">
+    <input type="checkbox" id="btnbox">
+    <p><b><i class="fa fa-asterisk fa-fw margin-right text-teal"></i>Skills</b></p>
+    <ul>
+          <li><p>Adobe Photoshop</p>
+          <div class="container">
+            <div class="skills photoshop">90%</div>
+          </div></li>
+          <li><p>Photography</p>
+          <div class="container">
+            <div class="skills Photography">80%</div>
+          </div></li>
+          <li><p>Drawing</p>
+          <div class="container">
+            <div class="skills drawing">60%</div>
+          </div></li>
+          <li><p>Media</p>
+          <div class="container">
+            <div class="skills media">89%</div>
+          </div></li>
+    </ul>
+    <label for="btnbox" class="btn-area">
+      <span class="btn1">show more</span>
+      <span class="btn2">show less</span>
+        </label>
+          </div>
 
 </body>
 </html>
