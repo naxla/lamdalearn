@@ -2,6 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -9,12 +10,35 @@
   margin: auto;
   text-align: center;
   font-family: arial;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #5388ce ;
+}
+.card2{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: rgb(104, 139, 160);
+
 }
 
 .title {
   color: grey;
   font-size: 18px;
 }
+
+#my profile {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+
 
 button {
   border: none;
@@ -65,25 +89,6 @@ button:hover, a:hover {
 .drawing {width: 65%; background-color:#007c4f;}
 .media {width: 60%; background-color:#007c4f;}
 
-
-body{
-  background:wheat;
-  font-family: montseraat;
-}
-.wrapper{
-  width: 90px;
-  min-height: auto;
-  margin: 20px; auto;
-  
-}
-.wrapper ul{
-  list-style: none;
-  padding: 0;
-}
-
-
-
-
 </style>
 
 
@@ -93,7 +98,7 @@ body{
 <h2 style="text-align:center">User Profile</h2>
 
 <div class="card">
-  <img src="img/profile img.avif" alt="John" style="width:50%">
+  <img src="img/1831650.png" alt="John" style="width:50%;" >
   <h1> SYED NASLA </h1>
   <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Webdeveloper</p>
   <p>Anna University</p>
@@ -103,32 +108,59 @@ body{
     <a href="https://in.linkedin.com/"><i class="fa fa-linkedin"></i></a>  
     <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569849%7Cb%7Cfacebook%7C&placement=&creative=589460569849&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-592856129%26loc_physical_ms%3D9148702%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiAuqKqBhDxARIsAFZELmKjvLJDQLbP9jmTjymnc2Py60PNYsEr_0b4US2a6gGm41qeYOfDXK8aAv3pEALw_wcB"><i class="fa fa-facebook"></i></a>
   </div>
-  <div class="wrapper">
-    <input type="checkbox" id="btnbox">
+</div>
+  <div class="card2">
+  <button onclick="myFunction()" style="width: fit-content;" >Show More</button>
+  <div id="my profile">
     <p><b><i class="fa fa-asterisk fa-fw margin-right text-teal"></i>Skills</b></p>
-    <ul>
-          <li><p>Adobe Photoshop</p>
-          <div class="container">
-            <div class="skills photoshop">90%</div>
-          </div></li>
-          <li><p>Photography</p>
-          <div class="container">
-            <div class="skills Photography">80%</div>
-          </div></li>
-          <li><p>Drawing</p>
-          <div class="container">
-            <div class="skills drawing">60%</div>
-          </div></li>
-          <li><p>Media</p>
-          <div class="container">
-            <div class="skills media">89%</div>
-          </div></li>
-    </ul>
-    <label for="btnbox" class="btn-area">
-      <span class="btn1">show more</span>
-      <span class="btn2">show less</span>
-        </label>
+    <p>Adobe Photoshop</p>
+          <div class="light-grey round-xlarge small">
+            <div class="container center round-xlarge teal" style="width:90%">90%</div>
           </div>
+          <p>Photography</p>
+          <div class="light-grey round-xlarge small">
+            <div class="container center round-xlarge teal" style="width:80%">
+              <div class="center text-white">80%</div>
+            </div>
+          </div>
+          <p>Drawing</p>
+          <div class="light-grey round-xlarge small">
+            <div class="container center round-xlarge teal" style="width:75%">55%</div>
+          </div>
+          <p>Media</p>
+          <div class="light-grey round-xlarge small">
+            <div class="container center round-xlarge teal" style="width:50%">50%</div>
+          </div>
+          <br>
+          <p class="large text-theme"><b><i class="fa fa-globe fa-fw margin-right text-teal"></i>Languages</b></p>
+          <p>Tamil</p>
+          <div class="light-grey round-xlarge">
+            <div class="round-xlarge teal" style="height:24px;width:100%"></div>
+          </div>
+          <p>English</p>
+          <div class="light-grey round-xlarge">
+            <div class="round-xlarge teal" style="height:24px;width:75%"></div>
+          </div>
+          <p>Arabic</p>
+          <div class="light-grey round-xlarge">
+            <div class="round-xlarge teal" style="height:24px;width:25%"></div>
+          </div>
+          <br>
+    
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("my profile");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      </script>
+      
+
+  
 
 </body>
 </html>
