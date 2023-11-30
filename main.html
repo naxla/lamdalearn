@@ -65,29 +65,94 @@ button:hover, a:hover {
 .hidden {
   display: none;
 }
+.skills-area {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20%;
+}
 
+.skill {
+  position: relative;
+  margin-bottom: 40px;
+}
 
+.skill-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
 
-.container {
-  align-content: center;
+.skill-bar {
   width: 100%;
-  background-color: #ddd;
-  
-  
+  background-color: #000;
+  height: 20px;
+  z-index: -1;
+  border-radius: 100px;
+  position: absolute;
 }
 
-
-.skills {
-  text-align: right;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: rgb(0, 0, 0);
+.skill-fill {
+  background: rgb(65, 142, 77);
+  height: 40px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  overflow: hidden;
 }
 
-.photoshop {width: calc(100% - 20px); background-color: #007c4f;}
-.photography {width: 80%; background-color: #007c4f;}
-.drawing {width: 65%; background-color:#007c4f;}
-.media {width: 60%; background-color:#007c4f;}
+.skill-percent {
+  font-size: 20px;
+}
+
+.html {
+  animation: html 3s;
+  width: 90%;
+}
+
+.css {
+  animation: css 3s;
+  width: 80%;
+}
+
+.js {
+  animation: js 3s;
+  width: 70%;
+}
+
+@keyframes html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes css {
+  from {
+    width: 0;
+  }
+  to {
+    width: 86%;
+  }
+}
+
+@keyframes js {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .skills-area {
+    padding: 0 5%;
+  }
+}
+
 
 </style>
 
@@ -112,42 +177,33 @@ button:hover, a:hover {
   <div class="card2">
   <button onclick="myFunction()" style="width: fit-content;" >Show More</button>
   <div id="my profile">
-    <p><b><i class="fa fa-asterisk fa-fw margin-right text-teal"></i>Skills</b></p>
-    <p>Adobe Photoshop</p>
-          <div class="light-grey round-xlarge small">
-            <div class="container center round-xlarge teal" style="width:90%">90%</div>
-          </div>
-          <p>Photography</p>
-          <div class="light-grey round-xlarge small">
-            <div class="container center round-xlarge teal" style="width:80%">
-              <div class="center text-white">80%</div>
-            </div>
-          </div>
-          <p>Drawing</p>
-          <div class="light-grey round-xlarge small">
-            <div class="container center round-xlarge teal" style="width:75%">55%</div>
-          </div>
-          <p>Media</p>
-          <div class="light-grey round-xlarge small">
-            <div class="container center round-xlarge teal" style="width:50%">50%</div>
-          </div>
-          <br>
-          <p class="large text-theme"><b><i class="fa fa-globe fa-fw margin-right text-teal"></i>Languages</b></p>
-          <p>Tamil</p>
-          <div class="light-grey round-xlarge">
-            <div class="round-xlarge teal" style="height:24px;width:100%"></div>
-          </div>
-          <p>English</p>
-          <div class="light-grey round-xlarge">
-            <div class="round-xlarge teal" style="height:24px;width:75%"></div>
-          </div>
-          <p>Arabic</p>
-          <div class="light-grey round-xlarge">
-            <div class="round-xlarge teal" style="height:24px;width:25%"></div>
-          </div>
-          <br>
+    <p><b><i class="fa fa-asterisk fa-fw margin-right text-teal"></i><b>Skills</b></b></p>
+    <div class="skills-area">
+      <div class="skill">
+        <div class="skill-title">HTML</div>
+        <div class="html skill-fill">
+          <span class="skill-percent">90%</span>
+        </div>
+      </div>
     
-    </div>
+    <div class="skill">
+      <div class="skill-title">CSS</div>
+      <div class="css skill-fill">
+        <span class="skill-percent">86%</span>
+      </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">JSS</div>
+        <div class="js skill-fill">
+          <span class="skill-percent">75%</span>
+        </div>
+      </div>
+  </div>
+
+  
+</div>
+</div>
+</div>
     <script>
       function myFunction() {
         var x = document.getElementById("my profile");
