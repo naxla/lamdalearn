@@ -12,19 +12,43 @@
   font-family: arial;
   padding-top: 2%;
   padding-bottom: 2%;
-  background-color: #5388ce ;
+  background-color: #781ba398 ;
 }
+
 .card2{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ 
   max-width: 500px;
-  margin: auto;
+  margin-right: 10px;
   text-align: center;
   font-family: Arial;
   padding-top: 2%;
   padding-bottom: 2%;
-  background-color: rgb(104, 139, 160);
+  background-color: rgb(235, 211, 235);
+  border: 1px solid #ccc;
 
 }
+.card3{
+ 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin-right: 10px;
+  text-align: center;
+  font-family: Arial;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: rgb(235, 211, 235);
+  border: 1px solid #ccc;
+  position: relative; 
+  left: 420px;
+  bottom: 805px;
+
+   
+}
+
+
+}
+
 
 .title {
   color: grey;
@@ -35,7 +59,7 @@
   width: 100%;
   padding: 50px 0;
   text-align: center;
-  background-color: lightblue;
+  background-color: rgb(0, 0, 0);
   margin-top: 20px;
 }
 
@@ -56,7 +80,7 @@ button {
 a {
   text-decoration: none;
   font-size: 22px;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 button:hover, a:hover {
@@ -77,8 +101,9 @@ button:hover, a:hover {
 }
 
 .skill-title {
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 10px;
+  
 }
 
 .skill-bar {
@@ -91,7 +116,7 @@ button:hover, a:hover {
 }
 
 .skill-fill {
-  background: rgb(65, 142, 77);
+  background: rgb(184, 81, 138);
   height: 40px;
   border-radius: 100px;
   display: flex;
@@ -120,6 +145,20 @@ button:hover, a:hover {
   width: 70%;
 }
 
+.tamil {
+  animation: tamil 3s;
+  width: 90%;
+}
+.english {
+  animation: tamil 3s;
+  width: 86%;
+}
+
+.arabic {
+  animation: tamil 3s;
+  width: 75%;
+}
+
 @keyframes html {
   from {
     width: 0;
@@ -139,6 +178,33 @@ button:hover, a:hover {
 }
 
 @keyframes js {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes tamil {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes english {
+  from {
+    width: 0;
+  }
+  to {
+    width: 86%;
+  }
+}
+
+@keyframes arabic {
   from {
     width: 0;
   }
@@ -173,9 +239,12 @@ button:hover, a:hover {
     <a href="https://in.linkedin.com/"><i class="fa fa-linkedin"></i></a>  
     <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569849%7Cb%7Cfacebook%7C&placement=&creative=589460569849&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-592856129%26loc_physical_ms%3D9148702%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiAuqKqBhDxARIsAFZELmKjvLJDQLbP9jmTjymnc2Py60PNYsEr_0b4US2a6gGm41qeYOfDXK8aAv3pEALw_wcB"><i class="fa fa-facebook"></i></a>
   </div>
-</div>
-  <div class="card2">
   <button onclick="myFunction()" style="width: fit-content;" >Show More</button>
+</div>
+<br> <br> <br>
+
+  <div class="card2">
+  
   <div id="my profile">
     <p><b><i class="fa fa-asterisk fa-fw margin-right text-teal"></i><b>Skills</b></b></p>
     <div class="skills-area">
@@ -199,6 +268,34 @@ button:hover, a:hover {
         </div>
       </div>
   </div>
+  <p class="large text-theme"><b><i class="fa fa-globe fa-fw margin-right text-teal"></i>Languages</b></p>
+  <div class="skills-area">
+    <div class="skill">
+      <div class="skill-title">Tamil</div>
+      <div class="tamil skill-fill">
+        <span class="skill-percent">100%</span>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-title">English</div>
+      <div class="english skill-fill">
+        <span class="skill-percent">86%</span>
+      </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">Arabic</div>
+        <div class="english skill-fill">
+          <span class="skill-percent">75%</span>
+        </div>
+        </div>
+        <div class="right-container">      
+          <div class="card3">
+            <h3 class="text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw margin-right xlarge text-teal"></i>Activity Experience</h3>
+            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+          </div>
+      </div>
+  
+
 
   
 </div>
